@@ -1,0 +1,14 @@
+<% @projects.each do |project| %>
+
+<ul>
+
+	<li> Title: <%= project.title %> </li>
+	<li> Description: <%= project.description %> </li>
+	<li> Goal: <%= project.goal %> </li>
+	<li> Start Date: <%= project.start_date %> </li>
+	<li> End Date: <%= project.end_date %> </li>
+	<li> Status: <%= project.active %> </li>
+</ul>
+
+<% end %>
+
