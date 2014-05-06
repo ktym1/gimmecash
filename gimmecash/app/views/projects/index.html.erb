@@ -2,7 +2,7 @@
 
 <ul>
 
-	<li> Title: <%= project.title %> </li>
+	<li> <%= link_to project.title, project_path(project.id) %> </li>
 	<li> Description: <%= project.description %> </li>
 	<li> Goal: <%= project.goal %> </li>
 	<li> Start Date: <%= project.start_date %> </li>
