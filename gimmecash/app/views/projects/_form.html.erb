@@ -1,0 +1,29 @@
+<%= form_for @project, url: {action: "create"}, html: {class: "project_form"} do |f| %>
+    <div>
+    	<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div>
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+	</div>
+	<div>
+		<%= f.label :start_date %>
+		<%= f.date_field(:start_date) %>
+	</div>
+	<div>
+		<%= f.label :end_date %>
+		<%= f.date_field(:end_date) %>
+	</div>
+	<div>
+		<%= f.label :goal %>
+		<%= f.number_field :goal %>
+	</div>
+	<div>
+		<%= f.label :active %>
+		<%= f.check_box :active %>
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>
