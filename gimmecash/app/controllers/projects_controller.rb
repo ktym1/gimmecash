@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
 
 	def create
 		@project = Project.new(projects_params)
-
+		@project.user_id = 1.to_i
 		if @project.save
 			redirect_to projects_path
 		else
@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
 		if @project.update_attributes(projects_params)
 			redirect_to projects_path
 		else
-			render :new
+			render :edit
 		end
 	end
 
