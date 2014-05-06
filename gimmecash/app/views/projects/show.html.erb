@@ -1,0 +1,14 @@
+<%= link_to "Back to Projects", projects_path %>
+
+<h1>TITLE: <%=  @project.title %> </h1>
+<p>
+DESCRIPTION: <%=  @project.description %><br>
+GOAL: <%=  @project.goal   %><br>
+START DATE: <%=  @project.start_date %><br>
+END DATE: <%=  @project.end_date %><br>
+</p>
+
+<p>
+<%= link_to "Edit", edit_project_path(@project) %>
+<%= link_to "Delete", @project, :confirm => "Are you sure?", :method => :delete %>
+</p>
